@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
-import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';/*
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";*/
+
 
 export default function ContactForm() {
 
@@ -18,11 +21,11 @@ export default function ContactForm() {
   return (
     <form id="contact-form" className="container box" onSubmit={sendEmail}>
       <div className='row justify-content-center'>
-          <input type="text" name="from_name" placeholder='Nombre' autoComplete='off' required/>
-          <input type="email" name="email" placeholder='Correo electronico' autoComplete='off' required/>
-          <input type="text" name="subject" id="subject" maxlength="30" placeholder='Asunto' autoComplete='off' required/>
-          <textarea name="html_message" maxlength="180" rows="2" placeholder='Mensaje' autoComplete='off' required/>
-          <input className='button' type="submit" value="Submit" />
+        <input type="text" name="from_name" placeholder='Nombre' autoComplete='off' required/>
+        <input type="email" name="email" placeholder='Correo electronico' autoComplete='off' required/>
+        <input type="text" name="subject" id="subject" maxLength="30" placeholder='Asunto' autoComplete='off' required/>
+        <textarea name="html_message" maxLength="180" rows="2" placeholder='Mensaje' autoComplete='off' required/>
+        <input className='button' type="submit" value="Enviar"/>
       </div>
     </form>
   );
